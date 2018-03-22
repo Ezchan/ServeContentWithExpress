@@ -1,0 +1,17 @@
+body {
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+.navbar-default {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+.navbar-right {
+  padding-right: 15px !important;
+}
+
+.movieRow {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<% include ../partials/navbar %>
+<div class="container">
+  <div class="row">
+<% Object.keys(movies).forEach(function (movie) { %>
+    <div>
+      <div class="thumbnail">
+        <img src="<%= movies[movie].homeImgLink %>" alt="<%= movies[movie].title %>">
+        <div class="caption">
+          <h3><%= movies[movie].title %></h3>
+          <p><%= movies[movie].description %></p>
+          <p><a href="<%= movies[movie].link %>" class="btn btn-default" role="button">View More</a></p>
+        </div>
+      </div>
+    </div>
+<% }) %>
+  </div>
+</div>
+<% include ../partials/footer %>
