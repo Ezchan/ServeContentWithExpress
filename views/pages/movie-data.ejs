@@ -10,14 +10,12 @@
     <div class="col-sm-8 col-sm-offset-1 col-md-9 col-md-offset-1">
       <h2><%= movie.longTitle %></h2>
       <p><%= movie.description %></p>
-      <p>
-        <span>Directors:</span>
-        <ul>
+      <span>Directors:</span>
+      <ul>
         <% Object.keys(movie.directors).forEach(function (director) { %>
           <li><%= movie.directors[director] %></li>
         <% }) %>
-        </ul>
-      </p>
+      </ul>
     </div>
   </div>
 </div>
