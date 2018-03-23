@@ -39,22 +39,12 @@ app.get('/', function (request, response) {
     movies: movies
   })
 })
-app.get('/avengers', function (request, response) {
-  response.render('pages/movie-data', {
-    movies: movies,
-    movie: movies['avengers']
-  })
-})
-app.get('/transformers', function (request, response) {
-  response.render('pages/movie-data', {
-    movies: movies,
-    movie: movies['transformers']
-  })
-})
-app.get('/black-panther', function (request, response) {
-  response.render('pages/movie-data', {
-    movies: movies,
-    movie: movies['black']
+Object.keys(movies).forEach(function (key) {
+  app.get(movies[key].link, function (request, response) {
+    response.render('pages/movie-data', {
+      movies: movies,
+      movie: movies[key]
+    })
   })
 })
 
